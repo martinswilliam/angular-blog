@@ -1,0 +1,40 @@
+
+.container__small-card {
+
+  width: 600px;
+  margin-bottom: 20px;
+
+
+
+}
+
+.container__small-card-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.small-card__img {
+
+width: 200px;
+min-width: 200px;
+margin-right: 20px;
+
+
+}
+
+.small-card__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.small-card__title > h1 {
+  margin-left: 20px;
+}
+
+.small-card__title > h1 > a {
+  text-decoration: none;
+}
+
+
