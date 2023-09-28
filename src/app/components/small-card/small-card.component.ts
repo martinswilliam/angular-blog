@@ -8,31 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SmallCardComponent implements OnInit {
 
   @Input()
-  smallCardImg1 = ""
+  smallCardImg = ""
 
   @Input()
-  smallCardTitle1 = ""
+  smallCardTitle = ""
 
   @Input()
-  smallCardDescription1 = ""
+  smallCardDescription = ""
 
-  @Input()
-  smallCardImg2 = ""
-
-  @Input()
-  smallCardTitle2 = ""
-
-  @Input()
-  smallCardDescription2 = ""
-
-  @Input()
-  smallCardImg3 = ""
-
-  @Input()
-  smallCardTitle3 = ""
-
-  @Input()
-  smallCardDescription3 = ""
+ 
 
   constructor() { }
 
