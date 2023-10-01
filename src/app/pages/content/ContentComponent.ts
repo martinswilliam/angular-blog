@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { dataFake } from '../../data/dataFake';
 
 
 @Component({
@@ -7,14 +9,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
+  photoCover: string = "";
+  contentTitle: string = "";
+  contentDescription: string = "";
+  private id: string | null = "0";
 
-  photoCover: string = "https://i.pinimg.com/originals/02/24/c8/0224c822ea6ce2f4e6d35ad000cc3300.jpg";
-  contentTitle: string = "Minha pagina";
-  contentDescription: string = "Olá mundo";
-
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(value => this.id = value.get("id")
+    );
+
+    this.setValuesToComponent(this.id);
+  }
+
+  setValuesToComponent(id: string | null) {
+    const result = dataFake.filter(article => article.id == id)[0]
+
+    this.contentTitle = result.title;
+    this.contentDescription = result.description;
+    this.photoCover = result.photoCover;
   }
 
 }
