@@ -1,5 +1,9 @@
 <div class="container__content">
+  <div class="back">
+   <button> <a [routerLink]="['']"> VOLTAR </a> </button>
+  </div>
   <div class="content__cover">
+
     <img src="{{ photoCover }}" alt="" />
   </div>
   <div class="content__title">
@@ -7,7 +11,6 @@
     <hr />
   </div>
   <div class="content__description">
-    <a [routerLink]="['']"></a>
     <p>
       {{ contentDescription }}
     </p>
